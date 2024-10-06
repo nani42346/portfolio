@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nani Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bcabdba762.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Image container for the top-right image -->
+    <div class="image-container">
+        <img src="images/img1.1.png" alt="Top Right Image" class="top-right-image" width="0" height="0">
+    </div>
+    
+    <!-- Header Section -->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo" alt="Logo" width="100" height="100">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hearder-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Dhanisiri</span><br> Koteswara Rao From India</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/img3.3.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>"I’m a passionate web developer with creating seamless digital experiences. I specialize in responsive web design,
+                         ensuring that every site I build looks great and functions flawlessly on all devices. Proficient in HTML, CSS, and JavaScript, 
+                         I’m constantly learning new technologies to push my work further. My motivation comes from solving complex problems and finding innovative ways to deliver 
+                         user-friendly solutions. Outside of work, I enjoy diving into new technologies, reading about UX design trends, and cycling through scenic routes."</p>
+
+                         <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+
+                         </div>
+                         <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                                <li><span>Web Development</span><br> Web app Development</li>
+                                <li><span>App Development</span><br>Building Android</li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2024</span><br> AI Internship at AIMERS Society</li>
+                                <li><span>2024</span><br> Web Development Intership at Coding Raja Technology</li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2026</span><br>BTech from Dhanekula Institute.</li>
+                                <li><span>2022</span><br> Intermediate from Sri Chaitanya Vijayawada.</li>
+                                <li><span>2020</span><br>Schooling from Sri Chaitanya Vijayawada.</li>
+                            </ul>
+                         </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------services------->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+             <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Web design is the process of creating the visual
+                and functional aspects of websites.</p>
+                 <a href="#">learn more</a>
+             </div>   
+
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>Ui/UX</h2>
+                <p>Web design is the process of creating the visual 
+                and functional aspects of websites.</p>
+                 <a href="#">learn more</a>
+             </div>   
+             </div>
+              <div>
+                
+        </div>
+
+    <script>
+
+       var tablinks = document.getElementsByClassName("tab-links");
+       var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classlist.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classlist.remove("active-tab");
+        }
+        event.currentTarget.classlist.add("active-link");
+        document.getElementsById(tabname).classlist.add("active-tab");
+        }    
+    </script>
+
+
+</body>
+</html>
